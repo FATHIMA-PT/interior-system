@@ -1,19 +1,20 @@
 import React from 'react'
 
 function Cart() {
+ 
   return (
     <div style={{marginTop:'100px'}}>
       
        <>
         <div className='row ms-5 me-5'>
          <div className='col-md-8'>
-            <table className='container table mt-5 rounded shadow border'>
+           <table className='container table mt-5 rounded shadow border'>
               <thead>
                 <tr>
                   <th>#</th>
                   <th>Product Name</th>
                   <th> Image</th>
-                  <th>Price</th>
+                  <th>Product Price</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -32,7 +33,7 @@ function Cart() {
                 
               </tbody>
     
-            </table>
+            </table> 
          </div>
         <div className='col-md-1'></div>
         <div className='col-md-3 border rounded p-3 mt-5 shadow'>

@@ -11,6 +11,12 @@ export const loginAPI = async(data)=>{
    return await commonAPI("POST",`${BASEURL}login/`,data,"")
 }
 
+// product-list API
 export const productlistAPI = async(header)=>{
     return await commonAPI("GET",`${BASEURL}productlist/`,"",header)
+ }
+
+//  Add to cart API
+export const cartAPI = async(header)=>{
+    return await commonAPI("GET",`${BASEURL}cartlist/`,"",header)
  }

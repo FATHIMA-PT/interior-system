@@ -2,8 +2,13 @@
 import React from 'react'
 import './Header.css'
 import { Link, useLocation } from 'react-router-dom'
+import { useMyContext } from '../../CONTEXT/context'
+
 
 function Header() {
+  
+    const {cart} = useMyContext()
+
     
   const location=useLocation().pathname
   const isLogin = location === '/'
@@ -22,7 +27,7 @@ function Header() {
     return (
         <div>
             {/* Header */}
-            <header >
+            <header  style={{zIndex:'1'}}   className='position-fixed top-0  w-100' >
                 {/* logo */}
                 <div className="logo">
                     <img className='logo-image' src="https://i.pinimg.com/564x/67/f8/0d/67f80dfb909022631a1a1780c4efe870.jpg" alt="" />
@@ -33,8 +38,12 @@ function Header() {
                 <nav>
                 {
                     isProducts ? <ul style={{display: isLogin || isRegister ? 'none' : ''}}>
-                    <li><Link to={'/wishlist'} className='nav-links'>Wishlist</Link></li>
-                    <li><Link to={'/cart'} className='nav-links'>Cart</Link></li>
+                   <li><Link to={'/home-page'} className='nav-links'>Home</Link></li>
+                   <li><Link to={'products'} className='nav-links'>Products</Link></li>
+                   <li><Link to={'/wishlist'}  type="submit" className='nav-links me-1'>Wishlist<span className="badge bg-light text-dark ms-1 rounded-pill">0</span>
+                    </Link></li>
+                    <li><Link to={'/cart'}  type="submit" className='nav-links me-1'>Cart<span className="badge bg-light text-dark ms-1 rounded-pill">{cart?.length || "0"}</span>
+                    </Link></li>
 
                     <li><Link to={'/'}  onClick={handleLogout} className='nav-links'>Logout</Link></li>
                 </ul> : 

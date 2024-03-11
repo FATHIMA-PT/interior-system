@@ -3,7 +3,7 @@ import React from 'react'
 function About() {
   return (
     <>
-    <div className='mt-3 align-items-center justify-content-center'>
+    <div className='mt-5  mb-5 align-items-center justify-content-center' >
         <h1 className='fw-bolder text-center fs-4 mt-5'>ABOUT US</h1>
         <div className="row mb-5 mt-5">
             <div className="col-lg-6">

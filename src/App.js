@@ -13,6 +13,7 @@ import About from './Components/COMMON/About-Us/About';
 import Products from './Components/COMMON/Products/Products';
 import Cart from './Components/COMMON/Cart';
 import Wishlist from './Components/COMMON/Wishlist';
+import Booking from './Components/COMMON/Booking/Booking';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/products' element={<Products />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/wishlist' element={<Wishlist />} />
+        <Route path='/booking' element={<Booking />} />
 
 
 
